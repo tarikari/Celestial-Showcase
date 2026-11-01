@@ -19,19 +19,80 @@
                     </button>
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="navbar-nav mx-auto">
-                            <li class="nav-item"><a href="Index.HTML" class="nav-link active">Home</a></li>
+                            <li class="nav-item"><a href="Index.HTML" class="nav-link">Home</a></li>
                             <li class="nav-item"><a href="About.HTML" class="nav-link">About</a></li>
                             <li class="nav-item"><a href="Planets.HTML" class="nav-link">Planets</a></li>
-                            <li class="nav-item"><a href="Facts.HTML" class="nav-link">Space Facts</a></li>
+                            <li class="nav-item"><a href="Facts.HTML" class="nav-link" active>Space Facts</a></li>
                             <li class="nav-item"><a href="Contacts.HTML" class="nav-link">Contacts</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <div class="container py-5 text-center">
+                <h1 class="text-warning">Amazing Space Facts</h1>
+                <p>Discover amazing Space Facts about our universe</p>
+                <div class="row g-4 mt-3">
+                    <div class="col text-white h-100">
+                        <div class="card-body">
+                            <h1>☀️</h1>
+                            <h4>The Sun is the star that stabilizes our Solar System.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-white h-100">
+                        <div class="card-body">
+                            <h1>🌏</h1>
+                            <h4>The Earth is the only planet with a habitable atmosphere.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-white h-100">
+                        <div class="card-body">
+                            <h1>🟠</h1>
+                            <h4>Mars is the main planet with plans of colonizing to make habitable in the future.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-white h-100">
+                        <div class="card-body">
+                            <h1>🪐</h1>
+                            <h4>While Saturn is not the only Planet in the Solar System to have a Ring Formation, it is its most prominent feature.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card text-black border-warning my-5">
+                <h3 class="text-warning">Did You Know?</h3>
+                <p id="fact">Click the button to discover a Random Space Fact!</p>
+                <button class="btn btn-warning" onclick="newFact()">New Fact</button>
+            </div>
             <footer class="footer">
                 © 2026 Solar Scape. A Journey Through the Universe
             </footer>
         </main>
+        <script>
+            var facts = [
+
+"Sunlight takes about 8 minutes and 20 seconds to reach Earth.",
+
+"Jupiter is the largest planet in our solar system.",
+
+"A day on Venus is longer than its year.",
+
+"Neptune takes about 165 Earth years to orbit the Sun.",
+
+"The Moon has almost no atmosphere.",
+
+"Mars has the tallest known volcano in our solar system.",
+
+"The Sun contains about 99.8% of the solar system's mass."
+
+];
+function newFact(){
+    var random=Math.floor(Math.random()*facts.length);
+    document.getElementById("fact").innerText=facts[random];
+}
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
